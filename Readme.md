@@ -10,7 +10,6 @@ This application uses the following Twilio products in conjuction with OpenAI's 
 - Voice (and TwiML, Media Streams)
 - Phone Numbers
 
-
 ## Prerequisites
 
 To use the app, you will  need:
@@ -94,5 +93,6 @@ To have the AI voice assistant talk before the user, uncomment the line `# await
 When the user speaks and OpenAI sends `input_audio_buffer.speech_started`, the code will clear the Twilio Media Streams buffer and send OpenAI `conversation.item.truncate`.
 
 Depending on your application's needs, you may want to use the [`input_audio_buffer.speech_stopped`](https://platform.openai.com/docs/api-reference/realtime-server-events/input-audio-buffer-speech-stopped) event, instead, os a combination of the two.
+
 
 
