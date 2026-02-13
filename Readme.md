@@ -4,6 +4,7 @@ This application demonstrates how to use Python, [Twilio Voice](https://www.twil
 
 The application opens websockets with the OpenAI Realtime API and Twilio, and sends voice audio from one to the other to enable a two-way conversation.
 
+
 See [here](https://www.twilio.com/en-us/blog/voice-ai-assistant-openai-realtime-api-python) for a tutorial overview of the code.
 
 
@@ -92,6 +93,7 @@ To have the AI voice assistant talk before the user, uncomment the line `# await
 
 ### Interrupt handling/AI preemption
 When the user speaks and OpenAI sends `input_audio_buffer.speech_started`, the code will clear the Twilio Media Streams buffer and send OpenAI `conversation.item.truncate`.
+
 
 
 
