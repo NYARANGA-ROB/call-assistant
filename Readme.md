@@ -12,7 +12,6 @@ This application uses the following Twilio products in conjuction with OpenAI's 
 
 ## Prerequisites
 
-
 To use the app, you will  need:
 
 - **Python 3.9+** We used \`3.9.13\` for development; download from [here](https://www.python.org/downloads/).
@@ -92,6 +91,7 @@ To have the AI voice assistant talk before the user, uncomment the line `# await
 
 ### Interrupt handling/AI preemption
 When the user speaks and OpenAI sends `input_audio_buffer.speech_started`, the code will clear the Twilio Media Streams buffer and send OpenAI `conversation.item.truncate`.
+
 
 
 
