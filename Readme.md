@@ -47,7 +47,6 @@ Keep in mind that each time you run the `ngrok http` command, a new URL will be 
 ### (Optional) Create and use a virtual environment
 
 To reduce cluttering your global Python environment on your machine, you can create a virtual environment. On your command line, enter:
-
 ```
 python3 -m venv env
 source env/bin/activate
@@ -92,5 +91,6 @@ To have the AI voice assistant talk before the user, uncomment the line `# await
 
 ### Interrupt handling/AI preemption
 When the user speaks and OpenAI sends `input_audio_buffer.speech_started`, the code will clear the Twilio Media Streams buffer and send OpenAI `conversation.item.truncate`.
+
 
 Depending on your application's needs, you may want to use the [`input_audio_buffer.speech_stopped`](https://platform.openai.com/docs/api-reference/realtime-server-events/input-audio-buffer-speech-stopped) event, instead, os a combination of the two.
